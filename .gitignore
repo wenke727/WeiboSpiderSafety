@@ -12,6 +12,7 @@ osm_bbox.osm.xml
 # Distribution / packaging
 result
 cache/
+crawls/
 sumo/osm/
 sumo/osm_baseline/
 log/

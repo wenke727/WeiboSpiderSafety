@@ -20,7 +20,7 @@ settings = get_project_settings()
 
 class CsvPipeline(object):
     def process_item(self, item, spider):
-        base_dir = '../result' + os.sep + item['keyword']
+        base_dir = './result' + os.sep + item['keyword']
         if not os.path.isdir(base_dir):
             os.makedirs(base_dir)
         file_path = base_dir + os.sep + item['keyword'] + '.csv'
@@ -28,6 +28,7 @@ class CsvPipeline(object):
             is_first_write = 1
         else:
             is_first_write = 0
+            
         if item:
             with open(file_path, 'a', encoding='utf-8-sig', newline='') as f:
                 writer = csv.writer(f)
@@ -65,7 +66,7 @@ class MyImagesPipeline(ImagesPipeline):
         image_url = request.url
         item = request.meta['item']
         sign = request.meta['sign']
-        base_dir = '../result' + os.sep + item['keyword'] + os.sep + 'images'
+        base_dir = './result' + os.sep + item['keyword'] + os.sep + 'images'
         if not os.path.isdir(base_dir):
             os.makedirs(base_dir)
         image_suffix = image_url[image_url.rfind('.'):]
@@ -82,7 +83,7 @@ class MyVideoPipeline(FilesPipeline):
 
     def file_path(self, request, response=None, info=None):
         item = request.meta['item']
-        base_dir = '../result' + os.sep + item['keyword'] + os.sep + 'videos'
+        base_dir = './result' + os.sep + item['keyword'] + os.sep + 'videos'
         if not os.path.isdir(base_dir):
             os.makedirs(base_dir)
         file_path = base_dir + os.sep + item['weibo']['id'] + '.mp4'

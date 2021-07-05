@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Weibo craweler
 - NLP
 
+## [1.0.03] - 2021-07-05
+
+### Added
+
+- `run.sh`
+  add [Scrapy Jobs](https://scrapy-chs.readthedocs.io/zh_CN/1.0/topics/jobs.html), 支持 暂停，恢复爬虫
+
 ## [1.0.02] - 2021-04-18
 
 ### Added
