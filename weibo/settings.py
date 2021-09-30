@@ -9,11 +9,12 @@ LOG_LEVEL = 'ERROR'
 DOWNLOAD_DELAY = 10 # 访问完一个页面再访问下一个时需要等待的时间，默认为10秒
 
 DEFAULT_REQUEST_HEADERS = {
-    'Accept':
-    'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7',
+    'Accept': 
+        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 
+        'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7',
     'cookie': 
-        "SINAGLOBAL=452566145120.1279.1595987591278; UOR=www.banshujiang.cn,widget.weibo.com,www.baidu.com; ULV=1625384859981:7:1:1:5009475146002.802.1625384859971:1618659289397; wvr=6; SSOLoginState=1625559850; XSRF-TOKEN=KNcjwVcbk9wtPeyodQ7qQnxd; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WW5ew7yPDVZUuPohDwMRRqr5JpX5KMhUgL.Fo24SK-feoepe0z2dJLoIEBLxK-L12BL122LxKqLBK2LBoqLxKBLB.2L1K-LxKqLBo5LBoBt; ALF=1657184725; SCF=Arqlq3Ydx6qJHrpA1eGEN82bofURpv98AGQRjrwiJALIfXf-igxr7Htx4JvsCe0FgQx4zjNccG_4Mvtgcujv6a0.; SUB=_2A25N4R4GDeRhGedH7lcU8i3NyD6IHXVulwjOrDV8PUNbmtB-LUH-kW9NUDy_SQtAPYSdgDudhBAWk4WVghIzo8ew; WBPSESS=259Q3fSAJtrUy0ZX7wI8yw1ggzLpp_g0MYSJ0X4mxtLTwFOy6z93FoshbRuKjXYqtsf2F04riORGlycJsoBFl-kkJXDvUg91kGaj7pSAvmEPJWUDtP6GZ45V2iojaw36"
+        "SINAGLOBAL=452566145120.1279.1595987591278; UOR=www.banshujiang.cn,widget.weibo.com,www.baidu.com; ULV=1625384859981:7:1:1:5009475146002.802.1625384859971:1618659289397; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WW5ew7yPDVZUuPohDwMRRqr5JpX5K-hUgL.Fo24SK-feoepe0z2dJLoIEBLxK-L12BL122LxKqLBK2LBoqLxKBLB.2L1K-LxKqLBo5LBoBt; SCF=Arqlq3Ydx6qJHrpA1eGEN82bofURpv98AGQRjrwiJALINjJFc3OwpWswkAMDwzg5s73iLy6b5KQ25D-rEUuCQkw.; SUB=_2A25N64kQDeRhGedH7lcU8i3NyD6IHXVugP3YrDV8PUJbmtB-LXXhkW9NUDy_SWqnb0JL5AwBUH1yjA52W1Zgbyc-; ALF=1657875645; SSOLoginState=1626339648; XSRF-TOKEN=L8OeqAIAvNwo0_HHf3ka2pT1; WBPSESS=259Q3fSAJtrUy0ZX7wI8yw1ggzLpp_g0MYSJ0X4mxtKuQ3d3dApyL59-oRtOyl5HHA1y4eG9u9uNuXXAxhvLPIg7enLcIHIA87YRvml6mTCQfRYNYIb2VqGOEaqD-lyz"
 }
 
 ITEM_PIPELINES = {
@@ -41,10 +42,10 @@ CONTAIN_TYPE = 0
 REGION = ['全部']
 
 # 搜索的起始日期，为yyyy-mm-dd形式，搜索结果包含该日期
-START_DATE = '2011-01-01'
+START_DATE = '2009-01-01'
 
 # 搜索的终止日期，为yyyy-mm-dd形式，搜索结果包含该日期
-END_DATE = '2021-07-07'
+END_DATE = '2010-01-01'
 
 # 进一步细分搜索的阈值，若结果页数大于等于该值，则认为结果没有完全展示，细分搜索条件重新搜索以获取更多微博。数值越大速度越快，也越有可能漏掉微博；数值越小速度越慢，获取的微博就越多。
 # 建议数值大小设置在40到50之间。

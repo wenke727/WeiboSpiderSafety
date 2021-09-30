@@ -17,10 +17,13 @@ def change_header_cn_2_en(df_, inplace=True):
         return None
 
 
-def combine_csv_in_folder(folder):
+def combine_csv_in_folder(folder, drop_duplicates=True):
     fns = [os.path.join(folder, fn) for fn in os.listdir(folder)]
     df = [ pd.read_csv(fn, parse_dates=['发布时间']) for fn in fns ]
     df = pd.concat(df)
+
+    if drop_duplicates:
+        df.drop_duplicates(inplace=True)
 
     return df
 
